@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia</title>
+    <title>Historia - Parkour Info</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,15 +11,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    
+
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand floating" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <i class="bi bi-lightning-charge"></i> Parkour Info
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -27,21 +27,104 @@
             </button>
             <div id="menu" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="historia.html" class="nav-link active">Historia</a></li>
-                    <li class="nav-item"><a href="tecnicas.html" class="nav-link">Técnicas</a></li>
-                    <li class="nav-item"><a href="beneficios.html" class="nav-link">Beneficios</a></li>
-                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="../pages/index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="../pages/historia.html" class="nav-link active">Historia</a></li>
+                    <li class="nav-item"><a href="../pages/tecnicas.html" class="nav-link">Técnicas</a></li>
+                    <li class="nav-item"><a href="../pages/beneficios.html" class="nav-link">Beneficios</a></li>
+                    <li class="nav-item"><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- header -->
-    <header class="text-light text-center d-flex align-items-center">
+    <!-- Header -->
+    <header class="historia-header text-light text-center d-flex align-items-center">
         <div class="container position-relative">
-            
+            <h1 data-aos="fade-down" data-aos-duration="1000">Historia del Parkour</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" class="lead">
+                Desde los orígenes en Francia hasta su expansión global.
+            </p>
         </div>
     </header>
+
+    <!-- Orígenes -->
+    <section class="py-5">
+        <div class="container historia-section">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="historia-box">
+                        <h5 class="text-accent mb-3"><i class="bi bi-flag"></i> Orígenes</h5>
+                        <p>
+                            El parkour tiene sus raíces en Francia, influenciado por técnicas de entrenamiento militar conocidas como Méthode Naturelle, desarrolladas por Georges Hébert a principios del siglo XX. Hébert defendía que “ser fuerte para ser útil” era clave, entrenando a las personas para moverse de manera eficiente en cualquier entorno natural o urbano.
+
+                            <h5 class="text-accent mb-3"><i class="bi bi-flag"></i> Nacimiento moderno</h5>
+                            En la década de 1980, David Belle, un joven de Lisses (Francia), se inspiró en las enseñanzas de su padre, Raymond Belle, un veterano militar y bombero altamente entrenado. David comenzó a adaptar estas técnicas para desplazarse por la ciudad, buscando fluidez y velocidad.
+                            <br>
+                            <br>
+                            <h5 class="text-accent mb-3"><i class="bi bi-flag"></i> Primeros grupos</h5>
+                            David se unió con amigos como Sébastien Foucan y los hermanos Belle, formando un grupo llamado Yamakasi a finales de los 80 y principios de los 90. Ellos entrenaban juntos y popularizaron este estilo de movimiento en su entorno local.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="../assets/img/hebert.jpg" alt="Historia del Parkour" class="img-fluid historia-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Línea de Tiempo -->
+    <section class="py-5" id="timeline">
+        <div class="container">
+            <h2 class="text-center mb-5 text-accent" data-aos="zoom-in"><i class="bi bi-calendar-event"></i> Línea de Tiempo</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card timeline-card h-100 border-0 p-3">
+                        <h5 class="text-accent">Principios S. XX</h5>
+                        <p>Georges Hébert desarrolla el Método Natural.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card timeline-card h-100 border-0 p-3">
+                        <h5 class="text-accent">Década de 1980</h5>
+                        <p>Raymond Belle entrena a su hijo en técnicas de superación de obstáculos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card timeline-card h-100 border-0 p-3">
+                        <h5 class="text-accent">Años 90</h5>
+                        <p>David Belle y Yamakasi popularizan el parkour en Francia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Influencias -->
+    <section class="py-5">
+        <div class="container historia-section" data-aos="fade-up">
+            <h3 class="text-accent mb-3"><i class="bi bi-lightbulb"></i> Influencias y Filosofía</h3>
+            <p>
+                El parkour es una disciplina fisica y mental originada en francia en los años 80 por david belle,
+                inspirada en lla "methode naturalle" de Georges hebert y el entranamiento de su padre Raymond Bell.
+                consiste en desplazarse de forma rapida, fluida y eficiente, superando obstaculos con saltos, escaladas,
+                saltos y otras tecnicas corporales. mas que un deporte, es una filosofia de vida basada en la autodisciplina,
+                la superacion personal, la adaptacion del entorno, creatividad, libertad y la exploracion del mundo.
+                Buscando no solo moverse mejor, sino tambien afrontar los retos de la vida con determinacion y resilencia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Parkour Info. El Arte del movimiento nunca se detiene</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

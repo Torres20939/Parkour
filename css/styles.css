@@ -4,6 +4,7 @@
     --color-secondary: #252525;
     --color-light: #ffe7d0;
     --color-accent: #fc6e20;
+    --color-accent-light: #ff7f3a;
 }
 
 /* fondo y texto base */
@@ -240,4 +241,45 @@ header p {
 /* scroll suave */
 html {
     scroll-behavior: smooth;
+}
+
+
+/* ===== HISTORIA STYLES ===== */
+
+.historia-header {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg) 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+/*  secciones */
+.historia-section {
+    background: linear-gradient(45deg, transparent 0%, rgba(37,37,37,0.3) 50%, transparent 100%);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+/* box historia */
+.historia-image {
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.historia-image:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/*  tarjetas timeline */
+.timeline-card {
+    background: rgba(27,27,27,0.9);
+    border-radius: 15px;
+    color: var(--color-light);
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 5px 15px rgba(252, 110, 32, 0.3);
 }
