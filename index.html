@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkour</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand floating" href="index.html">
+                <i class="bi bi-lightning-charge"></i> Parkour Info
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="pages/historia.html" class="nav-link">Historia</a></li>
+                    <li class="nav-item"><a href="pages/tecnicas.html" class="nav-link">Técnicas</a></li>
+                    <li class="nav-item"><a href="pages/beneficios.html" class="nav-link">Beneficios</a></li>
+                    <li class="nav-item"><a href="pages/contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-light text-center d-flex align-items-center">
+        <div class="container position-relative">
+            <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                Bienvenidos al Mundo del Parkour
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="lead">
+                Explora la historia, técnicas más usadas y los beneficios de este arte del desplazamiento
+            </p>
+            <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                <button class="btn btn-accent mt-3">
+                    <i class="bi bi-arrow-down"></i> Descubre Más
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <section class="py-5">
+        <div class="container">
+            <div class="main-section">
+                <h2 class="text-center mb-5" data-aos="fade-right" data-aos-duration="800">
+                    <i class="bi bi-question-circle text-accent"></i> ¿Qué es el Parkour?
+                </h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="slide-right" data-aos-duration="1000">
+                        <div class="box-model pulse-glow">
+                            <h5 class="text-accent mb-3">
+                                <i class="bi bi-cpu"></i> ¿Qué es el Parkour?
+                            </h5>
+                            <p class="mb-0">
+                                El parkour es una disciplina física y mental que se basa en moverse libremente por el entorno de un punto a otro
+                                de la forma más rápida, fluida y eficiente posible, superando obstáculos del entorno usando solo las capacidades
+                                del cuerpo humano. No es solo un deporte, sino también una filosofía que promueve la creatividad, autosuperación
+                                y la adaptación al medio.
+                            </p>
+                            <div class="mt-3 d-flex align-items-center">
+                                <small class="text-muted">
+                                    <i class="bi bi-info-circle"></i> Este cuadro demuestra: margin, border, padding y content
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="slide-left" data-aos-duration="1000">
+                        <img src="/assets/img/parkour1.jpg"
+                                alt="Ejemplo de Parkour" 
+                                class="img-fluid parkour-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Hitos y Leyendas -->
+    <section class="py-5" id="hitos">
+        <div class="container position-relative">
+            <h2 class="text-center mb-5 text-accent" data-aos="zoom-in" data-aos-duration="800">
+                <i class="bi bi-stars"></i> Hitos y Leyendas del Parkour
+            </h2>
+            <div class="row g-4">
+                <!-- Tarjeta 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+                    <div class="card legend-card h-100 border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="card-icon mx-auto">
+                                <i class="bi bi-person-badge text-white"></i>
+                            </div>
+                            <h5 class="card-title text-accent mb-3">Georges Hébert</h5>
+                            <p class="card-text">
+                                Creador del Método Natural (principios del s. XX), base filosófica del parkour moderno.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                    <div class="card legend-card h-100 border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="card-icon mx-auto">
+                                <i class="bi bi-fire text-white"></i>
+                            </div>
+                            <h5 class="card-title text-accent mb-3">Raymond Belle</h5>
+                            <p class="card-text">
+                                Bombero y veterano que transmitió las raíces del parkour a su hijo en Francia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                    <div class="card legend-card h-100 border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="card-icon mx-auto">
+                                <i class="bi bi-people text-white"></i>
+                            </div>
+                            <h5 class="card-title text-accent mb-3">David Belle y Yamakasi</h5>
+                            <p class="card-text">
+                                Consolidaron el parkour como disciplina urbana en los años 90.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                    <div class="card legend-card h-100 border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="card-icon mx-auto">
+                                <i class="bi bi-brush text-white"></i>
+                            </div>
+                            <h5 class="card-title text-accent mb-3">Sebastien Foucan</h5>
+                            <p class="card-text">
+                                Fundador del freerunning, estilo creativo y estético del movimiento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                    <div class="card legend-card h-100 border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="card-icon mx-auto">
+                                <i class="bi bi-camera-video text-white"></i>
+                            </div>
+                            <h5 class="card-title text-accent mb-3">Jump London & Jump Britain</h5>
+                            <p class="card-text">
+                                Documentales (2003-2005) que globalizaron el parkour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta Bonus -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                    <div class="card legend-card h-100 border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="card-icon mx-auto">
+                                <i class="bi bi-globe text-white"></i>
+                            </div>
+                            <h5 class="card-title text-accent mb-3">Expansión Global</h5>
+                            <p class="card-text">
+                                El parkour se extiende mundialmente como filosofía de superación personal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Parkour Info. El Arte del movimiento nunca se detiene</p>
+        </div>
+    </footer>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
