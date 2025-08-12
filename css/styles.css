@@ -283,3 +283,87 @@ html {
     border: 1px solid var(--color-accent);
     box-shadow: 0 5px 15px rgba(252, 110, 32, 0.3);
 }
+
+/*  ====== ESTILOS PARA TECNICAS.CSS ======= */
+.tecnicas-header {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg) 100%);
+    min-height: 60vh;
+    margin-top: 76px;
+}
+
+.tecnica-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, rgba(27,27,27,0.95), rgba(37,37,37,0.95));
+    border: 1px solid rgba(252, 110, 32, 0.25);
+    color: var(--color-light);
+}
+
+.tecnica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+.tecnica-icon { font-size: 3rem; margin-bottom: 1rem; }
+.tecnica-icon i { color: var(--color-accent); }
+
+.tecnica-esencial,
+.tecnica-combinada {
+    background: linear-gradient(135deg, rgba(27,27,27,0.95), rgba(37,37,37,0.95));
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    border: 1px solid rgba(252,110,32,0.25);
+    color: var(--color-light);
+    height: 100%;
+}
+
+.tecnica-combinada-image {
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* cajas destacadas en oscuro con borde acento */
+.tecnica-avanzada-box,
+.seguridad-box {
+    background: linear-gradient(135deg, rgba(27,27,27,0.9), rgba(37,37,37,0.9));
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    height: 100%;
+    color: var(--color-light);
+    transition: transform 0.3s ease;
+}
+
+.tecnica-avanzada-box:hover { transform: translateX(5px); }
+
+.seguridad-box ul li {
+    margin-bottom: 0.5rem;
+    color: var(--color-light);
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+/* badges y detalles en oscuro */
+.dificultad {
+    background: rgba(255,255,255,0.06);
+    color: var(--color-light) !important;
+}
+
+.dificultad *,
+.dificultad .text-muted,
+.tecnica-card .dificultad .text-muted {
+    color: var(--color-light) !important;
+    opacity: 0.9;
+}
+
+/* diseño responsivo */
+@media (max-width: 768px) {
+    .tecnica-esencial, .tecnica-combinada {
+        margin-bottom: 2rem;
+    }
+
+    .tecnica-avanzada-box {
+        margin-bottom: 1rem;
+    }
+}
+

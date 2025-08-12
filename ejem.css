@@ -1,51 +1,76 @@
-/* Hereda paleta de colores */
-:root {
-    --color-bg: #1b1b1b;
-    --color-secondary: #252525;
-    --color-light: #ffe7d0;
-    --color-accent: #fc6e20;
-}
-
-/* Header historia */
-.historia-header {
+/*  ====== ESTILOS PARA TECNICAS ======= */
+.tecnicas-header {
+    /* usar la misma paleta que historia/header (evita imagen inexistente) */
     background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg) 100%);
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
+    min-height: 60vh;
+    margin-top: 76px;
 }
 
-/* Secciones */
-.historia-section {
-    background: linear-gradient(45deg, transparent 0%, rgba(37,37,37,0.3) 50%, transparent 100%);
-    border-radius: 20px;
-    padding: 40px;
-}
-
-/* Box historia */
-.historia-box {
-    border: 4px solid var(--color-accent);
-    border-radius: 15px;
-    padding: 25px;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #1f1f1f 100%);
-}
-
-/* Imagen historia */
-.historia-image {
-    border-radius: 20px;
-    transition: transform 0.4s ease;
-}
-.historia-image:hover {
-    transform: scale(1.05) rotate(1deg);
-}
-
-/* Tarjetas timeline */
-.timeline-card {
-    background: rgba(27,27,27,0.9);
-    border-radius: 15px;
+/* tarjetas y bloques en tema oscuro */
+.tecnica-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, rgba(27,27,27,0.95), rgba(37,37,37,0.95));
+    border: 1px solid rgba(252,110,32,0.25);
     color: var(--color-light);
-    transition: all 0.3s ease;
 }
-.timeline-card:hover {
+.tecnica-card:hover {
     transform: translateY(-5px);
-    border: 1px solid var(--color-accent);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+.tecnica-icon { font-size: 3rem; margin-bottom: 1rem; }
+.tecnica-icon i { color: var(--color-accent); }
+
+.tecnica-esencial,
+.tecnica-combinada {
+    background: linear-gradient(135deg, rgba(27,27,27,0.95), rgba(37,37,37,0.95));
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    border: 1px solid rgba(252,110,32,0.25);
+    color: var(--color-light);
+    height: 100%;
+}
+
+.tecnica-combinada-image {
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* cajas destacadas en oscuro con borde acento */
+.tecnica-avanzada-box,
+.seguridad-box {
+    background: linear-gradient(135deg, rgba(27,27,27,0.9), rgba(37,37,37,0.9));
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    height: 100%;
+    color: var(--color-light);
+    transition: transform 0.3s ease;
+}
+.tecnica-avanzada-box:hover { transform: translateX(5px); }
+
+.seguridad-box ul li {
+    margin-bottom: 0.5rem;
+    color: var(--color-light);
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+/* Legibilidad en .dificultad */
+.dificultad {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--color-light) !important;
+  }
+  .dificultad *, 
+  .dificultad .text-muted,
+  .tecnica-card .dificultad .text-muted {
+    color: var(--color-light) !important;
+    opacity: 0.9;
+  }
+
+/* responsive */
+@media (max-width: 768px) {
+    .tecnica-esencial, .tecnica-combinada { margin-bottom: 2rem; }
+    .tecnica-avanzada-box { margin-bottom: 1rem; }
 }
