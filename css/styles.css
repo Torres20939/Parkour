@@ -30,6 +30,15 @@ body {
     text-shadow: 0 0 10px rgba(252, 110, 32, 0.3);
 }
 
+.navbar-toggler {
+    border: 1px solid rgba(252, 110, 32, 0.3);
+    padding: 4px 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 231, 208, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 .nav-link {
     color: var(--color-light) !important;
     font-weight: 500;
@@ -102,7 +111,7 @@ header p {
 .box-model {
     position: relative;
     padding: 30px;
-    margin: 25px;
+    margin: 0 0 25px 0;
     border: 4px solid var(--color-accent);
     border-radius: 15px;
     background: linear-gradient(135deg, var(--color-secondary) 0%, #1f1f1f 100%);
@@ -128,7 +137,7 @@ header p {
     backdrop-filter: blur(5px);
     border-radius: 20px;
     margin: 20px 0;
-    padding: 40px 0;
+    padding: 40px 0; /* Eliminar padding horizontal */
 }
 
 #hitos {
@@ -224,9 +233,10 @@ header p {
 .btn-accent {
     background: var(--color-gradient);
     border: none;
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 50px;
     font-weight: 600;
+    font-size: 0.9rem;
     color: white;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(252, 110, 32, 0.3);
@@ -244,7 +254,7 @@ html {
 }
 
 
-/* ===== HISTORIA STYLES ===== */
+/* ===== HISTORIA.HTML STYLES ===== */
 
 .historia-header {
     background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg) 100%);
@@ -367,3 +377,461 @@ html {
     }
 }
 
+/* ====== BENEFICIOS.HTML STYLES =====  */
+
+.benefit-card {
+    background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+    border: 1px solid rgba(252, 110, 32, 0.2);
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5), 0 0 30px rgba(252, 110, 32, 0.25);
+    border-color: rgba(252, 110, 32, 0.4);
+}
+
+.benefit-card .card-body {
+    flex-grow: 1; /* permite que el cuerpo de la tarjeta crezca */
+}
+
+.benefit-card .card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 5px 15px rgba(252, 110, 32, 0.3);
+    transition: all 0.4s ease;
+}
+
+.benefit-card:hover .card-icon {
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(252, 110, 32, 0.4);
+}
+
+.benefit-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem; /* espacio entre titulo y texto */
+}
+
+.benefit-card .card-text {
+    color: var(--color-light);
+    opacity: 0.9; /* Mejora el contraste sin ser demasiado fuerte */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* ====== CONTACTO.HTML STYLES =====  */
+.contacto-header {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg) 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 76px; /* ajuste para la navbar fija */
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M 12 0 L 0 0 0 12" fill="none" stroke="%23fc6e20" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    animation: float 20s ease-in-out infinite;;
+}
+
+/* contenedor del formulario */
+.contact-form-container {
+    background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(252, 110, 32, 0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.contact-form-container:hover {
+    border-color: rgba(252, 110, 32, 0.4);
+}
+
+/* estilos para los campos del formulario */
+.form-control {
+    background-color: var(--color-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-light);
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--color-bg);
+    color: var(--color-light);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px rgba(252, 110, 32, 0.2);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Caja de informacion de contacto */
+.contact-info-box {
+    background: linear-gradient(135deg, rgba(27,27,27,0.9), rgba(37,37,37,0.9));
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    height: 100%;
+    color: var(--color-light);
+    transition: all 0.3s ease;
+}
+
+.contacto-info-box:hover {
+    transform: translateY(5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.contact-info-item i {
+    font-size: 1.75rem;
+    color: var(--color-accent);
+    margin-right: 15px;
+    margin-top: 5px;
+    min-width: 30px;
+}
+
+.contact-info-item a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info-item a:hover {
+    color: var(--color-accent);
+}
+
+.contact-info-box h5 {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* ===== DISEÑO RESPONSIVO ORIENTADO A MOVILES ===== */
+
+/* tablets y pantallas pequeñas (768px y menos) */
+@media (max-width: 768px) {
+    /* navbar */
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .navbar-toggler {
+        border: 1px solid rgba(252, 110, 32, 0.3);
+        padding: 4px 8px;
+        line-height: 1.5;
+    }
+
+    /* header */
+    header {
+        min-height: 50vh;
+        padding: 80px 0 40px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    /* box model */
+    .box-model {
+        padding: 20px 0;
+        margin: 10px 0;
+        border-width: 2px;
+        border-radius: 10px;
+    }
+
+    /* secciones principales */
+    .main-section {
+        padding: 20px 10px;
+        border-radius: 15px;
+        margin: 10px 0;
+    }
+
+    /* cards y legend cards */
+    .legend-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    /* Imagenes */
+    .parkour-image {
+        margin-top: 2rem;
+    }
+
+    /* seccion hitos */
+    #hitos {
+        padding: 40px 0;
+    }
+
+    /* tecnicas */
+    .tecnica-esencial,
+    .tecnica-combinada {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+
+    .tecnica-esencial,
+    .tecnica-combinada {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+
+    .tecnica-avanzada-box,
+    .seguridad-box {
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .tecnica-icon {
+        font-size: 2.5rem;
+    }
+
+    /* headers especificos */
+    .historia-header,
+    .tecnicas-header,
+    .contacto-header {
+        min-height: 40vh;
+        padding: 80px 0 40px;
+    }
+
+    /* formulario contacto */
+    .contact-form-container {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info-box {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    /* benefit cards */
+    .benefit-card {
+        margin-bottom: 2rem;
+    }
+
+    .benefit-card .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
+
+/* moviles (576px y menos) */
+@media (max-width: 578px) {
+    /* container ajustado */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* header */
+    header {
+        min-height: 45vh;
+        padding: 70px 0 30px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* box model mobile */
+    .box-model {
+        padding: 15px;
+        margin: 10px 0;
+        border-width: 2px;
+        border-radius: 10px;
+    }
+
+    .box-model h5 {
+        font-size: 1.1rem;
+    }
+
+    .box-model p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* secciones */
+    .main-section {
+        padding: 20px 0;
+        border-radius: 15px;
+        margin: 10px 0;
+    }
+
+    /* cards */
+    .legend-card {
+        margin-bottom: 1rem;
+    }
+
+    .legend-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .card-icon i {
+        font-size: 1.2rem;
+    }
+
+    /* titulos y texto */
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    h2.card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* botones */
+    .btn-accent {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    /* navbar mobile */
+    .navbar-collapse {
+        margin-top: 1rem;
+        padding: 1rem 0;
+        background: var(--color-secondary);
+        border-radius: 10px;
+    }
+
+    .navlink {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* headers especificos mobile */
+    .historia-header,
+    .tecnicas-header,
+    .contacto-header {
+        min-height: 35vh;
+        padding: 70px 0 30px;
+    }
+
+    /* timeline cards */
+    .timeline-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* tecnicas mobile */
+    .tecnica-esencial,
+    .tecnica-combinada {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tecnica-avanzada-box,
+    .seguridad-box {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .tecnica-icon {
+        font-size: 2rem;
+    }
+
+    /* formulario mobile */
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+
+    .contact-info-box {
+        padding: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .contact-info-item i {
+        font-size: 1.5rem;
+        margin-right: 12px;
+    }
+
+    /* form controls */
+    .form-control {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* benefit cards */
+    .benefit-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .benefit-card .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.75rem;
+    }
+
+    .benefit-card .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .benefit-card .card-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
