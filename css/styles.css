@@ -540,8 +540,21 @@ html {
 /* tablets y pantallas pequeñas (768px y menos) */
 @media (max-width: 768px) {
     /* navbar */
+
+    .navbar .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .navbar-brand {
         font-size: 1.1rem;
+    }
+
+    .navbar-collapse {
+        margin-top: 1rem;
+        padding: 1rem 0;
+        background: var(--color-secondary);
+        border-radius: 10px;
     }
 
     .navbar-toggler {
@@ -577,7 +590,7 @@ html {
 
     /* secciones principales */
     .main-section {
-        padding: 20px 10px;
+        padding: 20px 0;
         border-radius: 15px;
         margin: 10px 0;
     }
